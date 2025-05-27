@@ -69,6 +69,5 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'volunteer-frontend'
-          slot-name: 'Production'
           package: .
           
