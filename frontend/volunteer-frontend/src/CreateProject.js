@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import API from "./api";
-import LogoutButton from "./LogoutButton";
-
 
 function CreateProject() {
   const [form, setForm] = useState({
