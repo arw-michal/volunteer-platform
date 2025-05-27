@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import API from "./api";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -12,10 +11,11 @@ function Login() {
       const res = await API.post("/login", { email, password });
       console.log("Odpowiedź OK:", res.data);
       localStorage.setItem("token", res.data.token);
-      setTimeout(() => {
-       window.location.href = "/dashboard";
-      }, 100);
 
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 100);
+      
     } catch (err) {
       console.error("Błąd logowania:", err);
       alert("Błąd logowania");
