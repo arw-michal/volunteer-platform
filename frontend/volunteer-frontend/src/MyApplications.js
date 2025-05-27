@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import API from "./api";
-import LogoutButton from "./LogoutButton";
-
 
 function MyApplications() {
   const [apps, setApps] = useState([]);
